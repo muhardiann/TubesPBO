@@ -44,9 +44,12 @@ public class LaporController {
             e.printStackTrace();
         }
     }
-
     @FXML
-    public void Submit(KeyEvent event) {
+    public void Submit(ActionEvent event) {
+        submitData();
+    }
+    @FXML
+    public void submitData() {
         if (isDataComplete()) {
             String namaData = nama.getText();
             String kelaminData = kelamin.getText();
@@ -85,6 +88,7 @@ public class LaporController {
                 alert.getButtonTypes().setAll(menuButtonType, laporButtonType);
                 alert.showAndWait().ifPresent(buttonType -> {
                     if (buttonType == menuButtonType) {
+                        ActionEvent event = new ActionEvent();
                         navigateToMenu(event);
                     } else if (buttonType == laporButtonType) {
                         alert.close();
@@ -94,16 +98,20 @@ public class LaporController {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            nama.clear();
-            kelamin.clear();
-            alamat.clear();
-            tinggi.clear();
-            rambut.clear();
-            terlihat.clear();
+            clearFields();
         } else {
             showIncompleteDataAlert();
         }
 
+    }
+
+    private void clearFields() {
+        nama.clear();
+        kelamin.clear();
+        alamat.clear();
+        tinggi.clear();
+        rambut.clear();
+        terlihat.clear();
     }
 
     private boolean isDataComplete() {
@@ -121,7 +129,7 @@ public class LaporController {
         alert.showAndWait();
     }
 
-    private void navigateToMenu(KeyEvent event) {
+    private void navigateToMenu(ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Menu.fxml"));
             Parent root = loader.load();
@@ -136,18 +144,18 @@ public class LaporController {
     @FXML
     public void initialize() {
         // Attach key event handlers for each text field
-        nama.setOnKeyPressed(event -> handleEnter(event, nama));
-        kelamin.setOnKeyPressed(event -> handleEnter(event, kelamin));
-        alamat.setOnKeyPressed(event -> handleEnter(event, alamat));
-        tinggi.setOnKeyPressed(event -> handleEnter(event, tinggi));
-        rambut.setOnKeyPressed(event -> handleEnter(event, rambut));
-        terlihat.setOnKeyPressed(event -> handleEnter(event, terlihat));
+        nama.setOnKeyPressed(event -> handleEnter(event));
+        kelamin.setOnKeyPressed(event -> handleEnter(event));
+        alamat.setOnKeyPressed(event -> handleEnter(event));
+        tinggi.setOnKeyPressed(event -> handleEnter(event));
+        rambut.setOnKeyPressed(event -> handleEnter(event));
+        terlihat.setOnKeyPressed(event -> handleEnter(event));
     }
 
-    private void handleEnter(KeyEvent event, TextField field) {
+    private void handleEnter(KeyEvent event) {
         if (event.getCode() == KeyCode.ENTER) {
             // Submit when Enter is pressed in any text field
-            Submit(event);
+            submitData();
         }
     }
 }

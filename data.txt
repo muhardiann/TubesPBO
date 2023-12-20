@@ -40,3 +40,10 @@ Tinggi Badan		: 190 cm
 Ciri Rambut		: merah
 Terakhir Terlihat	: papua
 
+Nama			: muhardian
+Jenis Kelamin		: laki
+Alamat			: pga
+Tinggi Badan		: 190 cm
+Ciri Rambut		: merah
+Terakhir Terlihat	: papua
+
