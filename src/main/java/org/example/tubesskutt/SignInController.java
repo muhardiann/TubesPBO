@@ -11,10 +11,12 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.stage.Stage;
+
+import javax.security.auth.login.CredentialException;
 import java.io.File;
 import java.io.IOException;
 
-public class SignInController {
+public class SignInController implements CredentialValidator {
     @FXML
     private TextField usernameField;
     @FXML
@@ -36,6 +38,7 @@ public class SignInController {
         }
     }
 
+    @Override
     public boolean validateCredentials(String username, String password) {
         return username.equals("kemana") && password.equals("dimana");
     }
