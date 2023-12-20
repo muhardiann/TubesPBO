@@ -1,0 +1,14 @@
+Nama			: muhardian
+Jenis Kelamin		: laki
+Alamat			: pga
+Tinggi Badan		: 190 cm
+Ciri Rambut		: keriting
+Terakhir Terlihat	: papua
+
+Nama			: muhardian
+Jenis Kelamin		: perempuan
+Alamat			: sukabirus
+Tinggi Badan		: 190 cm
+Ciri Rambut		: lurus
+Terakhir Terlihat	: papua
+

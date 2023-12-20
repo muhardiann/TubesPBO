@@ -24,9 +24,9 @@
          <Cursor fx:constant="HAND" />
       </cursor>
     </Button>
-   <TreeTableView layoutX="53.0" layoutY="252.0" prefHeight="737.0" prefWidth="1814.0" style="-fx-background-radius: 10;">
+   <TreeTableView fx:id="treeTableView" layoutX="53.0" layoutY="252.0" prefHeight="737.0" prefWidth="1814.0" style="-fx-background-radius: 10;">
      <columns>
-       <TreeTableColumn prefWidth="334.0" text="NAMA" />
+       <TreeTableColumn fx:id="nama" prefWidth="334.0" text="NAMA" />
          <TreeTableColumn prefWidth="197.0" text="JENIS KELAMIN" />
        <TreeTableColumn prefWidth="456.0" text="ALAMAT" />
          <TreeTableColumn prefWidth="109.0" text="TINGGI BADAN" />
