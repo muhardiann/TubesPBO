@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="978.0" prefWidth="691.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.tubesskutt.LaporController">
+   <ImageView fitHeight="979.0" fitWidth="692.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Image/Lapor.png" />
+      </image>
+   </ImageView>
+    <Button layoutX="14.0" layoutY="68.0" onAction="#onKembali" prefHeight="48.0" prefWidth="142.0" style="-fx-background-color: transparent;" text="&lt;&lt; Menu " textAlignment="CENTER" textFill="WHITE">
+        <font>
+            <Font name="Algerian" size="26.0" />
+        </font>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+    </Button>
+   <TextField layoutX="24.0" layoutY="428.0" prefHeight="39.0" prefWidth="299.0" promptText="Ex: Abdul Keras">
+      <font>
+         <Font size="18.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="TEXT" />
+      </cursor>
+   </TextField>
+   <Text fill="WHITE" layoutX="24.0" layoutY="414.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama lengkap">
+      <font>
+         <Font name="Algerian" size="16.0" />
+      </font>
+   </Text>
+   <Text fill="WHITE" layoutX="351.0" layoutY="414.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jenis  kelamin">
+      <font>
+         <Font name="Algerian" size="16.0" />
+      </font>
+   </Text>
+   <TextField layoutX="351.0" layoutY="428.0" prefHeight="39.0" prefWidth="305.0" promptText="Laki-Laki / Perempuan">
+      <font>
+         <Font size="18.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="TEXT" />
+      </cursor>
+   </TextField>
+   <TextField layoutX="24.0" layoutY="528.0" prefHeight="39.0" prefWidth="631.0" promptText="Ex: Gg. PGA, Cibaduyut, Jawa Tengah, Timor Leste">
+      <font>
+         <Font size="18.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="TEXT" />
+      </cursor>
+   </TextField>
+   <Text fill="WHITE" layoutX="24.0" layoutY="514.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alamat">
+      <font>
+         <Font name="Algerian" size="16.0" />
+      </font>
+   </Text>
+   <TextField layoutX="24.0" layoutY="629.0" prefHeight="39.0" prefWidth="195.0" promptText="Ex: 130 cm">
+      <font>
+         <Font size="18.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="TEXT" />
+      </cursor>
+   </TextField>
+   <Text fill="WHITE" layoutX="24.0" layoutY="615.0" strokeType="OUTSIDE" strokeWidth="0.0" text="tinggi badan">
+      <font>
+         <Font name="Algerian" size="16.0" />
+      </font>
+   </Text>
+   <TextField layoutX="242.0" layoutY="629.0" prefHeight="39.0" prefWidth="414.0" promptText="Ex: Keriting, Merah">
+      <font>
+         <Font size="18.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="TEXT" />
+      </cursor>
+   </TextField>
+   <Text fill="WHITE" layoutX="242.0" layoutY="615.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CIRI RAMBUT">
+      <font>
+         <Font name="Algerian" size="16.0" />
+      </font>
+   </Text>
+   <TextField layoutX="24.0" layoutY="729.0" prefHeight="39.0" prefWidth="631.0" promptText="Ex: Papua, 31 Februari 2023 pukul 24.01 WIB">
+      <font>
+         <Font size="18.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="TEXT" />
+      </cursor>
+   </TextField>
+   <Text fill="WHITE" layoutX="24.0" layoutY="715.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tempat dan tanggal terakhir terlihat">
+      <font>
+         <Font name="Algerian" size="16.0" />
+      </font>
+   </Text>
+   <Button layoutX="294.0" layoutY="841.0" mnemonicParsing="false" onAction="#Submit" text="Submit Data">
+      <font>
+         <Font size="19.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </Button>
+</AnchorPane>
