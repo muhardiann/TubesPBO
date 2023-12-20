@@ -46,15 +46,3 @@ public class MenuController {
         }
     }
 }
-
-//        try {
-//            File file = new File("data.txt");
-//            if (file.exists()) {
-//                // Membuka file data.txt
-//                java.awt.Desktop.getDesktop().open(file);
-//            } else {
-//                System.out.println("File tidak ditemukan: " + file.getAbsolutePath());
-//            }
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }

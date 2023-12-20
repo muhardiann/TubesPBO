@@ -47,3 +47,10 @@ Tinggi Badan		: 190 cm
 Ciri Rambut		: merah
 Terakhir Terlihat	: papua
 
+Nama			: nopi
+Jenis Kelamin		: perempuan
+Alamat			: gg PGA
+Tinggi Badan		: 170 cm
+Ciri Rambut		: keriting
+Terakhir Terlihat	: bandung
+

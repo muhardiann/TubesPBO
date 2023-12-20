@@ -60,7 +60,10 @@ public class SignInController implements CredentialValidator {
                     // Membuka file data.txt
                     java.awt.Desktop.getDesktop().open(file);
                 } else {
-                    System.out.println("File tidak ditemukan: " + file.getAbsolutePath());
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Error");
+                    alert.setHeaderText("File tidak ditemukan");
+                    alert.showAndWait();
                 }
             } catch (IOException e) {
                 e.printStackTrace();
