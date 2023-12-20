@@ -12,6 +12,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
 
 public class SignInController {
@@ -43,26 +44,19 @@ public class SignInController {
 
         if (username.equals("kemana") && password.equals("dimana")) {
             try {
-                // Jika username dan password benar, beralih ke AdminPencarian.fxml
-                Parent menuRoot = FXMLLoader.load(getClass().getResource("AdminPencarian.fxml"));
-                Scene scene = new Scene(menuRoot, 1920.0, 1080.0);
-                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                Screen screen = Screen.getPrimary();
-                double screenWidth = screen.getVisualBounds().getWidth();
-                double screenHeight = screen.getVisualBounds().getHeight();
-
-                stage.setTitle("Admin - POOH");
-                // Set the scene dimensions and position to fit the screen
-                stage.setScene(scene);
-                stage.setX(screen.getVisualBounds().getMinX());
-                stage.setY(screen.getVisualBounds().getMinY());
-                stage.setWidth(screenWidth);
-                stage.setHeight(screenHeight);
-                stage.show();
-            } catch (IOException e) {
+                File file = new File("data.txt");
+                if (file.exists()) {
+                    // Membuka file data.txt
+                    java.awt.Desktop.getDesktop().open(file);
+                } else {
+                    System.out.println("File tidak ditemukan: " + file.getAbsolutePath());
+                }
+                }
+            catch (IOException e) {
                 e.printStackTrace();
             }
-        } else {
+        }
+        else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error");
             alert.setHeaderText("Username atau password tidak sesuai!");

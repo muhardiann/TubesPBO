@@ -32,20 +32,6 @@ public class MenuController {
     @FXML
     protected void onDataButtonClick(ActionEvent event) {
         try {
-            File file = new File("data.txt");
-            if (file.exists()) {
-                // Membuka file data.txt
-                java.awt.Desktop.getDesktop().open(file);
-            } else {
-                System.out.println("File tidak ditemukan: " + file.getAbsolutePath());
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-    @FXML
-    protected void onSignInButtonClick(ActionEvent event) {
-        try {
             // Jika tombol ditekan, beralih ke SignIn.fxml
             FXMLLoader loader = new FXMLLoader(getClass().getResource("SignIn.fxml"));
             Parent root = loader.load();
@@ -59,3 +45,15 @@ public class MenuController {
         }
     }
 }
+
+//        try {
+//            File file = new File("data.txt");
+//            if (file.exists()) {
+//                // Membuka file data.txt
+//                java.awt.Desktop.getDesktop().open(file);
+//            } else {
+//                System.out.println("File tidak ditemukan: " + file.getAbsolutePath());
+//            }
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }

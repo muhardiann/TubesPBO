@@ -12,3 +12,24 @@ Tinggi Badan		: 190 cm
 Ciri Rambut		: lurus
 Terakhir Terlihat	: papua
 
+Nama			: muhardian
+Jenis Kelamin		: laki
+Alamat			: pga
+Tinggi Badan		: 190 cm
+Ciri Rambut		: keriting
+Terakhir Terlihat	: papua
+
+Nama			: fathih
+Jenis Kelamin		: perempuan
+Alamat			: sukabirus
+Tinggi Badan		: 200 cm
+Ciri Rambut		: merah
+Terakhir Terlihat	: papua
+
+Nama			: muhardian
+Jenis Kelamin		: laki
+Alamat			: pga
+Tinggi Badan		: 290 cm
+Ciri Rambut		: keriting
+Terakhir Terlihat	: papua
+

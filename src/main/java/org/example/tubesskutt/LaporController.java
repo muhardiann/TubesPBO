@@ -79,14 +79,14 @@ public class LaporController {
             alert.setHeaderText("Terimakasih sudah melapor, semoga beliau cepat ditemukan 😊");
 
             ButtonType menuButtonType = new ButtonType("Menu");
-            ButtonType listButtonType = new ButtonType("Lihat list");
+            ButtonType laporButtonType = new ButtonType("Lapor lagi");
 
-            alert.getButtonTypes().setAll(menuButtonType, listButtonType);
+            alert.getButtonTypes().setAll(menuButtonType, laporButtonType);
             alert.showAndWait().ifPresent(buttonType -> {
                 if (buttonType == menuButtonType) {
                     navigateToMenu(event);
-                } else if (buttonType == listButtonType) {
-                    openFile(filePath);
+                } else if (buttonType == laporButtonType) {
+                    alert.close();
                 }
             });
 
@@ -109,21 +109,6 @@ public class LaporController {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(scene);
             stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    private void openFile(String filePath) {
-        try {
-            File file = new File(filePath);
-            if (file.exists()) {
-                // Code to open the data.txt file
-                // Using Desktop to open the file in the default system editor
-                java.awt.Desktop.getDesktop().open(file);
-            } else {
-                System.out.println("File not found: " + filePath);
-            }
         } catch (IOException e) {
             e.printStackTrace();
         }
